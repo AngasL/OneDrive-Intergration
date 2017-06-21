@@ -1,0 +1,26 @@
+﻿@model  IList<OneDriveIntergration.Models.GraphService>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Drives</h2>
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th class="col-lg-2">Functionality</th>
+        <th class="col-lg-2">Http Request</th>
+        <th class="col-lg-2">Request Body</th>
+        <th class="col-lg-3">Http Response</th>
+        <th class="col-lg-3">Description</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a href="Drives/@item.Link" target="_blank">@item.Name</a></td>
+            <td>@item.HttpRequest</td>
+            <td>@item.RequestBody</td>
+            <td>@item.HttpResponse</td>
+            <td>@item.Description</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,44 @@
+﻿@model  OneDriveIntergration.Models.AuthenticationResult
+@{
+    ViewBag.Title = "Authorize";
+}
+
+<h2>Authorized</h2>
+
+<table class="table table-hover table-striped table-break-word">
+    <tr>
+        <th class="col-lg-2">Name</th>
+        <th class="col-lg-10">Value</th>
+    </tr>
+    <tr>
+        <td>access_token</td>
+        <td>@Model.AccessToken</td>
+    </tr>
+    <tr>
+        <td>refresh_token</td>
+        <td>@Model.RefreshToken</td>
+    </tr>
+    <tr>
+        <td>id_token</td>
+        <td>@Model.IdToken</td>
+    </tr>
+    <tr>
+        <td>expires_in</td>
+        <td>@Model.ExpiresIn</td>
+    </tr>
+    <tr>
+        <td>ext_expires_in</td>
+        <td>@Model.ExtExpiresIn</td>
+    </tr>
+    <tr>
+        <td>token_type</td>
+        <td>@Model.TokenType</td>
+    </tr>
+    <tr>
+        <td>scope</td>
+        <td>@Model.Scope</td>
+    </tr>
+</table>
+
+
+

@@ -1,0 +1,29 @@
+﻿@model  IList<OneDriveIntergration.Models.Document>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Documents</h2>
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>File Name</th>
+        <th>Size</th>
+        <th>Type</th>
+        <th>Last Modified By</th>
+        <th>Last Modified Time</th>
+        <th>Download</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a href="@item.OnlieEditingUrl" target="_blank">@item.Name</a></td>
+            <td>@item.FileSize Bytes</td>
+            <td>@item.Extention</td>
+            <td>@item.LastModifiedBy</td>
+            <td>@item.LastModifedTime UTC</td>
+            <td><a href="@item.DownloadUrl" target="_blank">Download</a></td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,15 @@
+﻿@model  Dictionary<string, string>
+@{
+    ViewBag.Title = "Home Page";
+}
+<table class="table table-hover table-striped">
+    <tr>
+        <th>Catagories</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a href="@item.Value" target="_blank">@item.Key</a></td>
+        </tr>
+    }
+</table>
